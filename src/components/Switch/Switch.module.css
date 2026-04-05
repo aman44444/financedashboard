@@ -1,0 +1,30 @@
+.switch {
+  width: 44px;
+  height: 24px;
+  background: #d1d5db; /* gray */
+  border-radius: 999px;
+  position: relative;
+  transition: background 0.25s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.thumb {
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 3px;
+  transition: transform 0.25s ease;
+}
+
+/* ACTIVE (green) */
+.active {
+  background: #22c55e;
+}
+
+.active .thumb {
+  transform: translateX(20px);
+}
