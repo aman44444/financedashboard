@@ -29,7 +29,6 @@
   transform: translate(16px, -50%);
 }
 
-/* Mobile: even slimmer */
 @media (max-width: 768px) {
   .switch {
     width: 32px;      

@@ -18,24 +18,21 @@ export default function Navbar() {
     `${styles.link} ${isActive ? styles.active : ""}`;
 
   return (
-    <nav className="relative border-b border-gray-200 bg-white px-4 md:px-6 py-3">
+    <nav className="sticky top-0 z-50 border-b border-gray-200 bg-white px-4 md:px-6 py-3">
       
-      {/* Heading div (centered) */}
       <div className="text-center">
         <h1 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900">
           Finance Dashboard
         </h1>
       </div>
 
-      {/* Links div (below heading) */}
       <div className="mt-2 flex justify-center gap-6 overflow-x-auto">
         <NavLink to="/" className={linkClasses}>Dashboard</NavLink>
         <NavLink to="/transactions" className={linkClasses}>Transactions</NavLink>
         <NavLink to="/insights" className={linkClasses}>Insights</NavLink>
       </div>
 
-      {/* Switch div (right side, full navbar height, vertically centered, slightly left on desktop) */}
-      <div className="absolute right-4 md:right-24 top-0 h-full flex items-center gap-3">
+      <div className="absolute right-4 md:right-6 top-0 h-full flex items-center gap-3">
         <span className="hidden sm:block text-sm text-gray-500">
           {state.role === "admin" ? "Admin" : "Viewer"}
         </span>
