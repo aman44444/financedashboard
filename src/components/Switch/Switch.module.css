@@ -1,23 +1,22 @@
 .switch {
-  width: 44px;      
-  height: 24px;
+  width: 36px;      
+  height: 20px;
   background: #d1d5db;
   border-radius: 999px;
   position: relative;
   cursor: pointer;
   transition: background 0.25s ease;
   display: inline-block;
-  vertical-align: middle;
 }
 
 .thumb {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   background: white;
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  left: 3px;
+  left: 2px;
   transform: translateY(-50%);
   transition: transform 0.25s ease;
 }
@@ -27,19 +26,20 @@
 }
 
 .active .thumb {
-  transform: translate(20px, -50%);
+  transform: translate(16px, -50%);
 }
 
+/* Mobile: even slimmer */
 @media (max-width: 768px) {
   .switch {
-    width: 36px;      
-    height: 20px;
+    width: 32px;      
+    height: 18px;
   }
   .thumb {
     width: 14px;
     height: 14px;
   }
   .active .thumb {
-    transform: translate(16px, -50%);
+    transform: translate(14px, -50%);
   }
 }
