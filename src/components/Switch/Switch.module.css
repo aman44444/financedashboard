@@ -1,13 +1,13 @@
 .switch {
-  width: 44px;
+  width: 44px;      
   height: 24px;
-  background: #d1d5db; /* gray */
+  background: #d1d5db;
   border-radius: 999px;
   position: relative;
-  transition: background 0.25s ease;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
+  transition: background 0.25s ease;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .thumb {
@@ -16,15 +16,30 @@
   background: white;
   border-radius: 50%;
   position: absolute;
+  top: 50%;
   left: 3px;
+  transform: translateY(-50%);
   transition: transform 0.25s ease;
 }
 
-/* ACTIVE (green) */
 .active {
   background: #22c55e;
 }
 
 .active .thumb {
-  transform: translateX(20px);
+  transform: translate(20px, -50%);
+}
+
+@media (max-width: 768px) {
+  .switch {
+    width: 36px;      
+    height: 20px;
+  }
+  .thumb {
+    width: 14px;
+    height: 14px;
+  }
+  .active .thumb {
+    transform: translate(16px, -50%);
+  }
 }

@@ -18,30 +18,23 @@ export default function Navbar() {
     `${styles.link} ${isActive ? styles.active : ""}`;
 
   return (
-    <nav className="border-b border-gray-200 bg-white px-4 md:px-6 py-4">
-      
-      {/* TOP SECTION */}
-      <div className="grid grid-cols-3 items-center">
-        
-        <div />
+    <nav className="border-b border-gray-200 bg-white px-4 md:px-6 py-3">
+      <div className="flex items-center justify-between h-[56px]">
+        <div className="w-[80px]" />
 
-        <h1 className="text-center text-lg md:text-xl font-bold text-black">
+        <h1 className="text-center text-base sm:text-lg md:text-xl font-semibold text-gray-900">
           Finance Dashboard
         </h1>
 
-        <div className="flex justify-end items-center gap-2">
+        <div className="flex items-center justify-end gap-3 h-full">
           <span className="hidden sm:block text-sm text-gray-500">
             {state.role === "admin" ? "Admin" : "Viewer"}
           </span>
-
-          <Switch
-            checked={state.role === "admin"}
-            onChange={toggleRole}
-          />
+          <Switch checked={state.role === "admin"} onChange={toggleRole} />
         </div>
       </div>
 
-      <div className="mt-3 flex justify-center gap-4 md:gap-6 overflow-x-auto">
+      <div className="mt-2 flex justify-center gap-6 overflow-x-auto">
         <NavLink to="/" className={linkClasses}>
           Dashboard
         </NavLink>
